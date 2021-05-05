@@ -1,11 +1,8 @@
 "use strict";
 
-import { Router } from "express";
+import instance from "../../../config/axiosConfig";
 
-const profile = Router();
-
-profile.get("/:id", async(req, res) => {
-    const { id } = req.params;
-});
-
-module.exports = profile;
+module.exports = async function allreports(req, res) {
+    const { data } = await instance.get("/status.json", {});
+    return res.json({ data });
+};

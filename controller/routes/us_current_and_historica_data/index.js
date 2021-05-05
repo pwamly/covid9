@@ -1,8 +1,10 @@
 "use strict";
 
 import { Router } from "express";
-const user = Router();
+import us_daily from "./us_daily";
 
-user.get("/", () => {});
+const us = Router();
 
-module.exports = user;
+us.get("/", us_daily);
+
+module.exports = us;
