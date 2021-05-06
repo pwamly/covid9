@@ -1,0 +1,414 @@
+{
+	"info": {
+		"_postman_id": "740577ab-7259-4d07-bcfa-107b82990ca3",
+		"name": "covid9",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "state reports",
+			"item": [
+				{
+					"name": "get info for all states",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/covid/basicinfo/allstates",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"covid",
+								"basicinfo",
+								"allstates"
+							]
+						},
+						"description": "Basic information about all states"
+					},
+					"response": []
+				},
+				{
+					"name": "info for all state since initial tracking",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/covid/total_info/allstates",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"covid",
+								"total_info",
+								"allstates"
+							]
+						},
+						"description": "Basic information about all states"
+					},
+					"response": []
+				},
+				{
+					"name": "info by state",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/covid/basicinfo/state?name=ny",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"covid",
+								"basicinfo",
+								"state"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "ny"
+								}
+							]
+						},
+						"description": "Basic information about all states"
+					},
+					"response": []
+				},
+				{
+					"name": "recently data for a single state",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/covid/recently_info/state?name=la",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"covid",
+								"recently_info",
+								"state"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "la"
+								}
+							]
+						},
+						"description": "Basic information about all states"
+					},
+					"response": []
+				},
+				{
+					"name": "info for most recently data for all states",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/covid/recently_info/allstates",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"covid",
+								"recently_info",
+								"allstates"
+							]
+						},
+						"description": "Basic information about all states"
+					},
+					"response": []
+				},
+				{
+					"name": "specific state in specific date",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/covid/specific_state/?name=la&date=20200312",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"covid",
+								"specific_state",
+								""
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "la"
+								},
+								{
+									"key": "date",
+									"value": "20200312"
+								}
+							]
+						},
+						"description": "Basic information about all states"
+					},
+					"response": []
+				},
+				{
+					"name": "All covid data for single state",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/covid/all_data_state/?name=la",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"covid",
+								"all_data_state",
+								""
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "la"
+								}
+							]
+						},
+						"description": "Basic information about all states"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Api status",
+			"item": [
+				{
+					"name": "api status",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/covid/status",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"covid",
+								"status"
+							]
+						},
+						"description": "Basic information about all states"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "us reports",
+			"item": [
+				{
+					"name": "all us covid reports",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/covid/us",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"covid",
+								"us"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "the most recently covid data for us",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/covid/us/recently",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"covid",
+								"us",
+								"recently"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all us covid data for a specific date",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/covid/us/date?date=20200322",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"covid",
+								"us",
+								"date"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "20200322"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,6 +1,10 @@
 "use strict";
 
-import { v4 as uuidv4 } from "uuid";
+import instance from "../../../config/axiosConfig";
 
-module.exports = async function allreports(req, res) {};
-// module.exports = { allreports, reportById, inspect };
+module.exports = async function allreports(req, res) {
+    const { date } = req.query;
+    console.log("");
+    const { data } = await instance.get(`/us/${date}.json`, {});
+    return res.json({ data });
+};

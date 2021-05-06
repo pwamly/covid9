@@ -29,9 +29,6 @@ reports.get("/specific_state/", specific_state_info);
 reports.get("/status/", status);
 
 //............. endpoint for US Current and Historical Data
-
-reports.get("/us", us_current_and_historica_data);
-reports.get("/all_data_state/", all_data_single_state);
-reports.get("/specific_state/", specific_state_info);
+reports.use("/us", us_current_and_historica_data);
 
 module.exports = reports;
